@@ -21,18 +21,18 @@ public class PasswordGenerator {
         Random random = new Random();
         StringBuilder password = new StringBuilder();
 
-        // Ensure at least one from each type
+        
         password.append(upper.charAt(random.nextInt(upper.length())));
         password.append(lower.charAt(random.nextInt(lower.length())));
         password.append(digits.charAt(random.nextInt(digits.length())));
         password.append(symbols.charAt(random.nextInt(symbols.length())));
 
-        // Fill remaining characters randomly
+        
         for (int i = 4; i < length; i++) {
             password.append(allChars.charAt(random.nextInt(allChars.length())));
         }
 
-        // Shuffle the characters
+    
         char[] pwdArray = password.toString().toCharArray();
         for (int i = 0; i < pwdArray.length; i++) {
             int j = random.nextInt(pwdArray.length);
@@ -46,4 +46,3 @@ public class PasswordGenerator {
         scanner.close();
     }
 }
-basic ga chuskodaniki code pai paina
